@@ -26,3 +26,10 @@ sequenceDiagram
     activate server
     server-->>browser: the JavaScript file
     deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: the raw data
+    deactivate server
+
+    browser->>user : Shows the processed information
